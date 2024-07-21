@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CWC Clicker</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #020202 0%,black 100%);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            margin: 0;
+        }
+        header, footer {
+            background-color:#020202;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        footer {
+            font-size: 14px;
+        }
+        h1 {
+            font-size: 48px;
+            margin-top: 20px;
+            color:whitesmoke;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin-top: 30px;
+        }
+        img:hover {
+            border-image: stretch;
+            transform: scale(1.1);
+            border-image-width: 20 px;
+            
+        }
+        .counter {
+            margin-top: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            background: #ffeb3b;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body><div></div>
+
+
+    <h1>CWC Token Earner</h1>
+    <img src="https://static.vecteezy.com/system/resources/previews/023/178/958/original/cwc-letter-logo-design-in-illustration-logo-calligraphy-designs-for-logo-poster-invitation-etc-vector.jpg" alt="Clickable Bitcoin" id="clickableImage">
+    <div class="counter">Coins: <span id="coinCounter">0</span></div>
+
+    <footer>&copy; 2024 CWC Clicker. All rights reserved.</footer>
+
+    <script>
+        let coinCounter = 0;
+        const clickableImage = document.getElementById('clickableImage');
+        const coinCounterElement = document.getElementById('coinCounter');
+
+        clickableImage.addEventListener('click', () => {
+            coinCounter++;
+            coinCounterElement.textContent = coinCounter;
+        });
+    </script>
+
+</body>
+</html>
